@@ -28,7 +28,7 @@ function App() {
       </div>
       <div class='divButton'>
         {/* <RandomFact facts={facts} onFactClick={setCurrentFact} /> */}
-        <button class="button" onClick={(factIndex) => setCurrentFact(facts[Math.floor(Math.random() * facts.length)])}>{'FACT '}</button>
+        <button class="button" onClick={(factIndex) => setCurrentFact(facts[Math.floor(Math.random() * facts.length)])}>{'New fact'}</button>
         {/* <CatFactsList facts={facts} onFactClick={(factIndex)=> setCurrentFact(facts[factIndex])}></CatFactsList> */}
         {/* {console.log(currentFact)} */}
 
