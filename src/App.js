@@ -47,7 +47,7 @@ function getFacts() {
       return response.json();
     })
   }
-  getFacts()
+  // getFacts()
   
   
   
