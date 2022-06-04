@@ -9,16 +9,25 @@ import CatFactDetail from './Components/catFactDetail';
 function App() {
   const [facts, setfacts] = useState([])
   const [currentFact, setCurrentFact] = useState({})
-  useEffect(() => {
-    async function fetchData() {
-      const facts1 = (await getFacts()).data;
-      setfacts(facts1);
+  const random = Math.floor(Math.random() * 34)
+  // useEffect(() => {
+  //   async function fetchData() {
+  //     const facts1 = (await getFacts(random)).data;
+  //     setfacts(facts1);
 
 
-    }
+  //   }
 
-    fetchData()
-  }, [])
+  //   fetchData()
+  // }, [])
+
+  async function fetchData1() {
+    let promise = await getFacts(random)
+    const facts1 = await promise.data
+    setfacts(facts1)
+    // setCurrentFact(facts[Math.floor(Math.random() * facts.length)])
+  }
+  
   console.info(facts);
  
   return (
@@ -28,6 +37,7 @@ function App() {
       </div>
       <div class='divButton'>
         {/* <RandomFact facts={facts} onFactClick={setCurrentFact} /> */}
+        <button class="button" onClick={(factIndex) => fetchData1()}>{'New fact'}</button>
         <button class="button" onClick={(factIndex) => setCurrentFact(facts[Math.floor(Math.random() * facts.length)])}>{'New fact'}</button>
         {/* <CatFactsList facts={facts} onFactClick={(factIndex)=> setCurrentFact(facts[factIndex])}></CatFactsList> */}
         {/* {console.log(currentFact)} */}
@@ -41,8 +51,8 @@ function App() {
     </div>
   );
 }
-function getFacts() {
-  return fetch('https://catfact.ninja/facts')
+function getFacts(props) {
+  return fetch(`https://catfact.ninja/facts?page=${props}`)
     .then((response) => {
       return response.json();
     })
