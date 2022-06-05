@@ -3,12 +3,12 @@ import { useState } from 'react';
 import CatFactDetail from './Components/catFactDetail';
 
 function App() {
-  debugger  
+ 
   const [facts, setfacts] = useState([])
   const random = Math.floor(Math.random() * 34)
 
   async function fetchData1() { 
-    debugger   
+      
     let promise = await getFacts(random)
     const facts1 = await promise.data
     const randomFact = Math.floor(Math.random() * facts1.length)
@@ -17,14 +17,14 @@ function App() {
 
   return (
     <div className='container'>
-      <div class='title'>
+      <div className='title'>
         Amazing Facts About Cats
       </div>
-      <div class='divButton'>
-        <button class="button" onClick={() => { fetchData1() }}>{'New fact'}</button>
+      <div className='divButton'>
+        <button className="button" onClick={() => { fetchData1() }}>{'New fact'}</button>
       </div>
-      <div class='divFactsParent'>
-        <div class='divFacts'>
+      <div className='divFactsParent'>
+        <div className='divFacts'>
           <CatFactDetail fact={facts}></CatFactDetail>
         </div>
       </div>
@@ -32,7 +32,7 @@ function App() {
   );
 }
 async function getFacts(props) {  
-  debugger
+
   const response = await fetch(`https://catfact.ninja/facts?page=${props}`);
   return await response.json();
 }

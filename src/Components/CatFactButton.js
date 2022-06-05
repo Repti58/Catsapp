@@ -12,7 +12,7 @@ import React from "react";
 
 const CatFactButton = (props) => {
 
-  return <button class="button" onClick={() => { props.fetchData() }}>{'New fact'}</button>
+  return <button className="button" onClick={() => { props.fetchData() }}>{'New fact'}</button>
   // <button onClick={props.onFactClick(Math.random() * props.facts.length)}>{'Fact'}</button>
 
 }
