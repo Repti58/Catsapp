@@ -7,14 +7,13 @@ function App() {
   const [facts, setfacts] = useState([])
   const random = Math.floor(Math.random() * 34)
 
-  async function fetchData1() { 
-      
+  async function fetchData1() {       
     let promise = await getFacts(random)
     const facts1 = await promise.data
     const randomFact = Math.floor(Math.random() * facts1.length)
     setfacts(facts1[randomFact])
   }
-
+  
   return (
     <div className='container'>
       <div className='title'>
