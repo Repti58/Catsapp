@@ -1,87 +1,37 @@
-import logo from './logo.svg';
 import './App.css';
-// import CatFactsList from './Components/catFactsList';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import CatFactDetail from './Components/catFactDetail';
-// import RandomFact from './Components/catFactsList';
 
-
-function App() {
+function App() {  
   const [facts, setfacts] = useState([])
-  const [currentFact, setCurrentFact] = useState({})
   const random = Math.floor(Math.random() * 34)
-  // useEffect(() => {
-  //   async function fetchData() {
-  //     const facts1 = (await getFacts(random)).data;
-  //     setfacts(facts1);
 
-
-  //   }
-
-  //   fetchData()
-  // }, [])
-
-  async function fetchData1() {
+  async function fetchData1() {    
     let promise = await getFacts(random)
     const facts1 = await promise.data
-    setfacts(facts1)
-    // setCurrentFact(facts[Math.floor(Math.random() * facts.length)])
+    const randomFact = Math.floor(Math.random() * facts1.length)
+    setfacts(facts1[randomFact])
   }
-  
-  console.info(facts);
- 
+
   return (
     <div className='container'>
       <div class='title'>
         Amazing Facts About Cats
       </div>
       <div class='divButton'>
-        {/* <RandomFact facts={facts} onFactClick={setCurrentFact} /> */}
-        <button class="button" onClick={(factIndex) => fetchData1()}>{'New fact'}</button>
-        <button class="button" onClick={(factIndex) => setCurrentFact(facts[Math.floor(Math.random() * facts.length)])}>{'New fact'}</button>
-        {/* <CatFactsList facts={facts} onFactClick={(factIndex)=> setCurrentFact(facts[factIndex])}></CatFactsList> */}
-        {/* {console.log(currentFact)} */}
-
+        <button class="button" onClick={() => { fetchData1() }}>{'New fact'}</button>
       </div>
       <div class='divFactsParent'>
         <div class='divFacts'>
-          <CatFactDetail fact={currentFact}></CatFactDetail>
+          <CatFactDetail fact={facts}></CatFactDetail>
         </div>
       </div>
     </div>
   );
 }
-function getFacts(props) {
-  return fetch(`https://catfact.ninja/facts?page=${props}`)
-    .then((response) => {
-      return response.json();
-    })
-  }
-  // getFacts()
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-//     // .then((data) => {
-//   //   console.log(data);
-//   // });
+async function getFacts(props) {  
+  const response = await fetch(`https://catfact.ninja/facts?page=${props}`);
+  return await response.json();
+}
 
-
-
-
-
-//   //   .then((response) => {
-//   //     return response.json();
-//   //   })
-
-// }
 export default App;
