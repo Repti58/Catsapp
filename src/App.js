@@ -20,7 +20,7 @@ function App() {
   return (
     <div className='container'>
       <div className='title'>
-        Amazing Facts About Cats
+        Amazing facts about cats
       </div>
       <div className='divButton'>
         <button className="button" onClick={() => { fetchData() }}>{'New fact'}</button>
