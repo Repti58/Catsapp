@@ -1,5 +1,5 @@
 import './App.css';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import CatFactDetail from './Components/catFactDetail';
 
 function App() {
@@ -7,12 +7,15 @@ function App() {
   const [facts, setfacts] = useState([])
   const random = Math.floor(Math.random() * 34)
 
-  async function fetchData1() {       
+  async function fetchData() { 
+    debugger      
     let promise = await getFacts(random)
     const facts1 = await promise.data
     const randomFact = Math.floor(Math.random() * facts1.length)
     setfacts(facts1[randomFact])
   }
+
+  useEffect(() => fetchData(), [])
   
   return (
     <div className='container'>
@@ -20,7 +23,7 @@ function App() {
         Amazing Facts About Cats
       </div>
       <div className='divButton'>
-        <button className="button" onClick={() => { fetchData1() }}>{'New fact'}</button>
+        <button className="button" onClick={() => { fetchData() }}>{'New fact'}</button>
       </div>
       <div className='divFactsParent'>
         <div className='divFacts'>
