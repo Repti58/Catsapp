@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import CatFactDetail from './Components/catFactDetail';
 
 function App() {
- 
+ debugger
   const [facts, setfacts] = useState([])
   const random = Math.floor(Math.random() * 34)
 
@@ -15,8 +15,10 @@ function App() {
     setfacts(facts1[randomFact])
   }
 
-  useEffect(() => fetchData(), [])
-  
+  useEffect(() => {
+    debugger
+    fetchData(), []})
+  debugger
   return (
     <div className='container'>
       <div className='title'>
@@ -34,7 +36,7 @@ function App() {
   );
 }
 async function getFacts(props) {  
-
+debugger
   const response = await fetch(`https://catfact.ninja/facts?page=${props}`);
   return await response.json();
 }
