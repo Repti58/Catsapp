@@ -15,9 +15,7 @@ function App() {
     setfacts(facts1[randomFact])
   }
 
-  useEffect(() => {
-    debugger
-    fetchData(), []})
+  useEffect(() => {fetchData()}, [])
   debugger
   return (
     <div className='container'>
