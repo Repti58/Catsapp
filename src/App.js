@@ -1,7 +1,7 @@
 import './App.css';
 import { useEffect, useState } from 'react';
 import CatFactDetail from './Components/catFactDetail';
-import pic from './img/cats.png'
+import pic from './img/cats-min.png'
 
 function App() {
   const [facts, setfacts] = useState([])
