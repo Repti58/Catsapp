@@ -1,16 +1,15 @@
 {
   "files": {
     "main.css": "/Catsapp/static/css/main.2ef0b032.css",
-    "main.js": "/Catsapp/static/js/main.6801a3e4.js",
+    "main.js": "/Catsapp/static/js/main.a5d3ca51.js",
     "static/js/787.4d57176a.chunk.js": "/Catsapp/static/js/787.4d57176a.chunk.js",
-    "static/media/cats.png": "/Catsapp/static/media/cats.c603baaccae2414e2966.png",
     "index.html": "/Catsapp/index.html",
     "main.2ef0b032.css.map": "/Catsapp/static/css/main.2ef0b032.css.map",
-    "main.6801a3e4.js.map": "/Catsapp/static/js/main.6801a3e4.js.map",
+    "main.a5d3ca51.js.map": "/Catsapp/static/js/main.a5d3ca51.js.map",
     "787.4d57176a.chunk.js.map": "/Catsapp/static/js/787.4d57176a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2ef0b032.css",
-    "static/js/main.6801a3e4.js"
+    "static/js/main.a5d3ca51.js"
   ]
 }
