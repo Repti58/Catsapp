@@ -8,6 +8,11 @@ Amazing facts about cats
 https://repti85.github.io/Catsapp/
 </p>
 
+## Description:
+This is my first project )) <br>
+On button click sends a fetch request to catfact.ninja API
+ and displays a random fact about cats.
+
 ## Features:
 - **Figma adaptive layout**
 - **Burger menu**
@@ -16,5 +21,5 @@ https://repti85.github.io/Catsapp/
 
 ## Appearance:
 <a href="https://repti85.github.io/Catsapp/">
-  <img src="img/screenshot.png">  
+  <img src="img/screenshot.png" width="800px">  
 </a>
