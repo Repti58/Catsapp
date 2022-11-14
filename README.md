@@ -1,11 +1,11 @@
 <h1 align="center">
-<a href="https://repti85.github.io/Catsapp">
+<a href="https://repti58.github.io/Catsapp">
 Amazing facts about cats (web app)
 </a>
 </h1>
 
 <p align="center">
-https://repti85.github.io/Catsapp/
+https://repti58.github.io/Catsapp/
 </p>
 
 ## Description:
@@ -18,6 +18,6 @@ On button click sends a fetch request to catfact.ninja API
 - **Technologies used: HTML, CSS, JavaScript, React**
 
 ## Appearance:
-<a href="https://repti85.github.io/Catsapp/">
+<a href="https://repti58.github.io/Catsapp/">
   <img src="img/screenshot.png" width="800px">  
 </a>
