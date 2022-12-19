@@ -5,7 +5,7 @@ Amazing facts about cats (web app)
 </h1>
 
 <p align="center">
-https://repti58.github.io/Catsapp/
+https://repti58.github.io/Catsapp
 </p>
 
 ## Description:
